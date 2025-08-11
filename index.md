@@ -1,5 +1,5 @@
 ---
-title: Miluše Pixová
+title: Tohle se bude zobrazovat jako název stránky
 description: Tohle je popis stránky
 keywords: Sem přijdou klíčová slova pro vyhledávače
 footer: tohle je zápatí stránky
@@ -14,23 +14,17 @@ H1: Titulek stránky
 ::: text
 ## O mně {#o-mne}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-dolor in reprehenderit in voluptate velit esse.
-
-Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapi
-vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis.
-Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec
-metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere.
-Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per
-conubia nostra inceptos himenaeos.
+Sem přijde část o mně. Budeš to psát jako text do index.md a po as 5 minutách to github bot
+automaticky převede do index.html, což je to, co se bude zobrazovat.
 :::
 :::
 
 ::: ordinacni-doba
 
 ## Ordinační hodiny {#ordinacni-hodiny}
+
+Sem přijde ordinační doba, tabulku pro jistotu nechávám ať tušíš, jak se dělají tabulky v markdownu.
+To, že nebudou pod sebou jednotlivé | znaky tak, jako jsou teď nehraje vůbec žádnou roli na výsledku.
 
 | Den     | doba         |
 | ------- | ------------ |
@@ -47,15 +41,27 @@ conubia nostra inceptos himenaeos.
 
 ## Nabízené služby {#nabizene-sluzby}
 
-Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
+Sem přijdou nabízené služby, jedna z možnosté je napsat je ve formátu odrážek
+Buď takhle:
 
-Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
+
+- služba 1
+- služba 2
+- služba 3
+
+Nebo takhle:
+
+1) služba 1
+2) služba 2
+3) služba 3
 
 ::: 
 
 ::: kontakt
 
 ## Kontakt {#kontakt}
+
+Sem můžeš dát klidně i odkazy.
 
 Na sociálních sítích mě nehledejte. 
 
