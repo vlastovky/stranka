@@ -1,0 +1,11 @@
+name: Pandoc md to html converter
+
+on: push
+
+jobs:
+  convert_via_pandoc:
+    runs-on: ubuntu.22.04
+    steps:
+      - uses: docker://pandoc/core:3.5
+        with:
+          args: "--standalone --template=template.html --output=index.html index.md"
