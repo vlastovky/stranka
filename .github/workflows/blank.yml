@@ -1,11 +1,38 @@
-name: Pandoc md to html converter
+name: Convert Markdown to HTML with Pandoc
 
-on: push
+on:
+  push:
+    paths:
+      - index.md
+      - template.html
+      - .github/workflows/pandoc.yml
+  workflow_dispatch:
 
 jobs:
-  convert_via_pandoc:
-    runs-on: ubuntu-22.04
+  build:
+    runs-on: ubuntu-latest
+
     steps:
-      - uses: docker://pandoc/core:3.5
-        with:
-          args: --standalone --output index.html index.md
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install Pandoc
+        run: sudo apt-get update && sudo apt-get install -y pandoc
+
+      - name: Convert index.md to index.html
+        run: |
+          pandoc index.md \
+            --template=template.html \
+            -o index.html
+
+      - name: Commit and push index.html
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add index.html
+          git commit -m "Auto-generate index.html from index.md"
+          git push
+        env:
+          # Needed to allow GitHub Actions to push back to the repo
+          # This is automatically provided in GitHub-hosted runners
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
