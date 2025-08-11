@@ -8,4 +8,4 @@ jobs:
     steps:
       - uses: docker://pandoc/core:3.5
         with:
-          args: "--standalone --template=template.html --output=index.html index.md"
+          args: "--standalone --template=/templates/template.html --output=index.html index.md"
